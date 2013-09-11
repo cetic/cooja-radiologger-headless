@@ -1,3 +1,8 @@
+This is a standalone plugin for COOJA to log the radio packets
+in headless mode. It is a stripped-down version of COOJA's 
+graphical Radio Logger. It allows to generate PCAPs while 
+executing COOJA from the command line with the -nogui option.
+
 To install this plugin in COOJA:
 
 1. (optional, recommended) Copy the 'cooja-radiologger-headless' folder to your COOJA apps folder.
