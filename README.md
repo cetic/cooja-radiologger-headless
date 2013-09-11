@@ -23,16 +23,7 @@ To install this plugin in COOJA:
         * You will see an empty window titled Radio logger headless. Do not close it.
         * Save your simulation and close COOJA.
     * By hand
-        * Add the following snippet to the obvious place in the .csc file:
-
-    <plugin>
-      be.cetic.cooja.plugins.RadioLoggerHeadless
-      <width>150</width>
-      <z>0</z>
-      <height>300</height>
-      <location_x>1</location_x>
-      <location_y>403</location_y>
-    </plugin>
+        * Add [**the following snippet**](https://github.com/cetic/cooja-radiologger-headless/blob/master/CSC_PLUGIN.txt) to the obvious place in the .csc file.
 
 Feel free to report suggestions and bugs to: 6lbr@cetic.be
 
