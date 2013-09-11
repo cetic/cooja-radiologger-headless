@@ -2,7 +2,10 @@ To install this plugin in COOJA:
 
 1) (optional, recommended) Copy the 'cooja-radiologger-headless' folder to your COOJA apps folder.
 2) (optional, recommended) Rename it to 'radiologger-headless'
-3) Add that folder to the DEFAULT_PROJECTDIRS variable, in one of the following ways:
+3) Build the plugin:
+    - Open a console and Navigate into the radiologger-headless folder
+    - type 'ant jar'
+4) Add that folder to the DEFAULT_PROJECTDIRS variable, in one of the following ways:
   a) Via the GUI.
     - Open COOJA in graphical mode
     - Go to Tools > Cooja Extensions
@@ -13,7 +16,7 @@ To install this plugin in COOJA:
     - Open ~/.cooja.user.properties
     - Append ';[APPS_DIR]/radiologger-headless' at the end of the DEFAULT_PROJECTDIRS line
     - Note: this file is created the very first time you use COOJA in GUI mode, and is user-specific.
-4) To enable this in your simulation, do it in one of 2 ways:
+5) To enable this in your simulation, do it in one of 2 ways:
   a) Via the GUI:
     - Open your simulation in COOJA
     - Select Tools > Headless radio logger...
