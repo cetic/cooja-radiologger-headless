@@ -5,6 +5,7 @@ To install this plugin in COOJA:
 3. Build the plugin:
     * Open a console and Navigate into the radiologger-headless folder
     * type `ant jar`
+    * You may need to adjust the cooja property in the build.xml file for this step
 4. Add that folder to the DEFAULT_PROJECTDIRS variable, in one of the following ways:
     * Via the GUI.
         * Open COOJA in graphical mode
