@@ -83,7 +83,7 @@ public class RadioLoggerHeadless extends VisPlugin {
     simulation = simulationToControl;
     radioMedium = simulation.getRadioMedium();
 
-    radioMedium.addRadioMediumObserver(radioMediumObserver = new Observer() {
+    radioMedium.addRadioTransmissionObserver(radioMediumObserver = new Observer() {
       public void update(Observable obs, Object obj) {
         RadioConnection conn = radioMedium.getLastConnection();
         if (conn == null) {
@@ -102,7 +102,7 @@ public class RadioLoggerHeadless extends VisPlugin {
 
   public void closePlugin() {
     if (radioMediumObserver != null) {
-      radioMedium.deleteRadioMediumObserver(radioMediumObserver);
+      radioMedium.deleteRadioTransmissionObserver(radioMediumObserver);
     }
   }
   public boolean setConfigXML(Collection<Element> configXML, boolean visAvailable) {
