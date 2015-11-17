@@ -3,6 +3,8 @@ in headless mode. It is a stripped-down version of COOJA's
 graphical Radio Logger. It allows to generate PCAPs while 
 executing COOJA from the command line with the -nogui option.
 
+Note the Cooja API has been modified between Contiki 3.0 and the current contiki, if you are using Contiki 3.0, please select the tag ['contiki-3.0'](https://github.com/cetic/cooja-radiologger-headless/tree/contiki-3.0)
+
 To install this plugin in COOJA:
 
 1. (optional, recommended) Copy the 'cooja-radiologger-headless' folder to your COOJA apps folder.
