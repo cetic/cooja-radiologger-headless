@@ -91,7 +91,8 @@ public class RadioLoggerHeadless extends VisPlugin {
         }
         RadioPacket radioPacket = conn.getSource().getLastPacketTransmitted();
         try {
-          pcapExporter.exportPacketData(radioPacket.getPacketData());
+          pcapExporter.exportPacketData(radioPacket.getPacketData(),
+                                        simulation.convertSimTimeToActualTime(conn.getStartTime()));
         } catch (IOException e) {
           System.err.println("Could not export pcap data");
           e.printStackTrace();
