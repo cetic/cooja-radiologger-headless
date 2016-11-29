@@ -76,9 +76,9 @@ public class RadioLoggerHeadless extends VisPlugin {
     super("Radio messages", cooja, false);
     System.err.println("Starting headless radio logger");
     try {
-        pcapExporter = new PcapExporter();
+      pcapExporter = new PcapExporter();
     } catch (IOException e) {
-        e.printStackTrace();
+      e.printStackTrace();
     }
     simulation = simulationToControl;
     radioMedium = simulation.getRadioMedium();
@@ -91,10 +91,11 @@ public class RadioLoggerHeadless extends VisPlugin {
         }
         RadioPacket radioPacket = conn.getSource().getLastPacketTransmitted();
         try {
-            pcapExporter.exportPacketData(radioPacket.getPacketData());
+          pcapExporter.exportPacketData(radioPacket.getPacketData(),
+                                        simulation.convertSimTimeToActualTime(conn.getStartTime()));
         } catch (IOException e) {
-            System.err.println("Could not export pcap data");
-            e.printStackTrace();
+          System.err.println("Could not export pcap data");
+          e.printStackTrace();
         }
       }
     });
@@ -113,11 +114,11 @@ public class RadioLoggerHeadless extends VisPlugin {
         pcapFile = simulation.getCooja().restorePortablePath(new File(element.getText()));
         try {
           pcapExporter.openPcap(pcapFile);
-          } catch (IOException e) {
-            e.printStackTrace();
-          }
+        } catch (IOException e) {
+          e.printStackTrace();
         }
       }
+    }
     return true;
   }
 
